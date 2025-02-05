@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i">
+</head>
+<header>
+    <nav>
+        <a href="index.html" id="home">Home</a>
+    </nav>
+    <nav>
+        <a href="contact.html" id="contact">contact</a>
+    </nav>
+    <nav>
+        <a href="dates.html" id="dates">Tour</a>
+    </nav>
+    
+</header>
+<body>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home </a>
+        <a href="about.html">About</a>
+        <a href="contact.html">contact</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()">☰</button>
+    <div class="welcome">
+        <p>we have different Clothes avilable click on the picture below to order one of these...</p>
+        <a href="https://www.amazon.com/s?k=t-shirts+unisex&ref=nb_sb_noss"><img src="pictures/hoodie.jpg" alt="tshirts" class="tshirts"></a>
+    </div>
+    <div class="name">
+    <div class="aboutus">
+        <button>
+            <h1>About Us</h1>
+        </button>
+    </div>
+    <div class="jane">
+        <button>
+            <h1>Jane Smith</h1>
+        </button>
+    </div>
+    <div class="mike">
+        <button>
+            <h1>Mike Johnson</h1>
+        </button>
+    </div>
+    <div class="john">
+        <button>
+            <h1>John Doe</h1>
+        </button>
+    </div>
+</div>
+    <div class="about">
+        <p>Our band was formed in 2010. We have been playing together for 10 years. We have played in many different countries and have a large following. We have released 5 albums and have won many awards. We are currently on tour and will be playing in a city near you soon. We hope to see you there!</p>
+    </div>
+    <div class="member1">
+        <h2>John Doe - Bassist</h2>
+        <p>John Doe, born in 1985, is the talented bassist of the band. Known for his groovy bass lines and melodic playing, John has been playing the bass since he was 12 years old. His passion for music and dedication to his craft have made him an integral part of the band.</p>
+    </div>
+        <div class="member2">
+            <h2>Jane Smith - Guitarist</h2>
+            <p>Jane Smith, born in 1987, is the talented guitarist of the band. Known for her intricate solos and rhythmic prowess, Jane has been playing the guitar since she was 10 years old. Her passion for music and dedication to her craft have made her an integral part of the band.</p>
+        </div>
+        <div class="member3">
+            <h2>Mike Johnson - Drummer</h2>
+            <p>Mike Johnson, born in 1990, is the energetic drummer of the band. With a background in jazz and rock, Mike brings a unique style to the band's sound. His precision and creativity behind the drum kit have earned him a reputation as one of the best drummers in the industry.</p>
+        </div>
+
+    <div class="button">
+        <button>X</button>
+    </div>
+
+    <footer>
+        <div class="footer__container">
+            
+                <h3> </h3>
+                <a href="https://www.instagram.com/yukonhs?igsh=Mjdja3FjODJobmxu" target="_blank" ><p>Instagram</p></a>
+                <a href="https://www.facebook.com/share/19mYqX9Yr1/" target="_blank"><p>Facebook</p></a>
+            
+                <h3> </h3>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+            
+                <h3> </h3>
+                <p>About Us</p>
+                <a href="contact.html"><p>Contact Form</p></a>
+          </div>
+    </footer>
+    <script >
+        
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+}
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+}
+    const aboutUsButton = document.querySelector('.aboutus button');
+    const aboutDiv = document.querySelector('.about');
+    const closeAbout = document.querySelector('.button button');
+
+    if (aboutUsButton) {
+        aboutUsButton.addEventListener('click', function() {
+            aboutDiv.style.display = 'inline-block';
+            closeAbout.style.display = 'inline-block';
+        });
+    }
+
+    const johnButton = document.querySelector('.john button');
+    const johnDiv = document.querySelector('.member1');
+    const johnAbout = document.querySelector('.button button');
+
+    if (johnButton) {
+        johnButton.addEventListener('click', function() {
+            johnDiv.style.display = 'inline-block';
+            johnAbout.style.display = 'inline-block';
+        });
+    }
+
+    const janeButton = document.querySelector('.jane button');
+    const janeDiv = document.querySelector('.member2');
+    const janeAbout = document.querySelector('.button button');
+
+    if (janeButton) {
+        janeButton.addEventListener('click', function() {
+            janeDiv.style.display = 'inline-block';
+            janeAbout.style.display = 'inline-block';
+        });
+    }
+
+    const mikeButton = document.querySelector('.mike button');
+    const mikeDiv = document.querySelector('.member3');
+    const mikeAbout = document.querySelector('.button button');
+
+    if (mikeButton) {
+        mikeButton.addEventListener('click', function() {
+            mikeDiv.style.display = 'inline-block';
+            mikeAbout.style.display = 'inline-block';
+        });
+    }
+
+    if (closeAbout) {
+        closeAbout.addEventListener('click', function() {
+            aboutDiv.style.display = 'none';
+            closeAbout.style.display = 'none';
+            johnDiv.style.display = 'none';
+            janeDiv.style.display = 'none';
+            mikeDiv.style.display = 'none';
+        });
+    }
+    </script>
+</body>
+</html>

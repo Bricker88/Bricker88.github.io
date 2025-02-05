@@ -1,0 +1,434 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image: url('pictures/stage\ fright.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  display: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+
+@media screen and (max-width: 800px) {
+  .openbtn {
+    display: block;
+  }
+
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  width: 100vw;
+  padding: 0 1em;
+  z-index: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .links {
+    flex-direction: column;
+    bottom: 2em;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+.aboutus , .contact, .tour{
+  font-size: 1.5em;
+  padding: 1em;
+  width: 45vmin;
+  height: 38vmin;
+  z-index: 1; 
+  position: relative; 
+  border-radius: .5rem;
+  background-color: #ffff;
+  opacity: 0.8;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.aboutus:hover, .contact:hover, .tour:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  background-color: #f0f0f0;
+  opacity: 0.9;
+  
+}
+
+header{
+    background-color: black;
+    font-size:  1.4em;
+    display: flex;
+    justify-content: space-around;
+    height: 2.5em;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+@media screen and (max-width: 800px){
+    header{
+      display: none;
+    }
+  
+}
+
+#home{
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#dates{
+  color: white;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+#about{
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contact{
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 700px){
+    header{
+        flex-direction: column;
+        height: 5em;
+    }
+    
+}
+
+/* <closebutton-style> ============================ */
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 1.4em; /* Same size as home */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.hamburger:hover svg {
+  transform: rotateX(180deg); /* Rotate to face up on hover */
+}
+
+.hamburger:active svg{
+  transform: scale(0.25);
+}
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: none; /* Remove animation */
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 12 63; /* Remove animation */
+  stroke-dashoffset: 0; /* Remove animation */
+}
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+/* ============================ */
+/* <style for bg> ======== */
+.background {
+  border-radius: 16px;
+  border: 1px solid #1a1a1a;
+  background: rgb(34, 34, 34);
+  mix-blend-mode: luminosity;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(15px);
+  width: 3.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* <style for menu__icon> ======== */
+.menu__icon {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .4s;
+}
+
+.menu__icon span {
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 0.125rem;
+  background-color: rgb(0, 122, 255);
+  box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);
+  transition: width .4s, transform .4s, background-color .4s;
+}
+
+.background {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.menu__icon :nth-child(1) {
+  width: 75%;
+}
+
+.menu__icon :nth-child(2) {
+  width: 50%;
+}
+
+.menu__icon:hover {
+  transform: rotate(-90deg);
+}
+
+.menu__icon:active span {
+  width: .25rem;
+  transform: translateX(10px);
+  background-color: rgb(255, 59, 48);
+}
+
+
+.background{
+  display: none;
+}
+
+@media screen and (max-width : 950px){
+  .background{
+      display: block;
+  }
+  
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  right: -30vh;
+  height: 100%;
+  width: 7em;
+  background-color: black;
+  overflow: hidden;
+  border-radius: .5rem;
+  transition: width .5s, transform .5s;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 1.5em;
+  padding-top: 4rem;
+  z-index: 1; /* Change z-index to a positive value */
+  transform: translateX(100%); /* Start off-screen */
+}
+
+.slider.show {
+  transform: translateX(0); /* Slide in */
+}
+
+.slider a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.closebtn {
+  cursor: pointer;
+  font-size: 36px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+}
+
+.footer__container {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: absolute;
+  bottom: -70vh; /* Position it outside the screen */
+  width: 100%;
+}
+
+.footer__item{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  padding: 0 1rem;
+  background-color: white;
+  width: 70%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the element */
+  opacity: 0.6;
+}
+
+
+.dates{
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+  .dates:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    background-color: #f0f0f0;
+    opacity: 0.9;
+  }
+
+
+  .welcome img{
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
+    position: relative;
+    left: 40%;
+  }
+  
+  .welcome h1{
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: -10%;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  
+  .welcome p{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: -10%;
+    left: -10%;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+  }
+  
+  img {
+    animation: glow 2s infinite alternate;
+  }
+
+ 
+  
+
+  .footer__container {
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    color:white;
+    align-items: center;
+    display: flex; /* Use flexbox */
+    justify-content: space-around; /* Distribute space evenly */
+    position: absolute;
+    bottom: -10vh;
+    background-color: black;
+    z-index: 1;
+  }
+  
+  .footer__container a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1em; /* Add some margin between items */
+  }

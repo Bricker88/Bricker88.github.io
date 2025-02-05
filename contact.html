@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i">
+</head>
+<header>
+    <nav>
+        <a href="index.html" id="home">Home</a>
+    </nav>
+    <nav>
+        <a href="about.html" id="about">About</a>
+    </nav>
+    <nav>
+        <a href="dates.html" id="dates">Tour</a>
+    </nav>
+    
+</header>
+
+<body>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home </a>
+        <a href="about.html">About</a>
+        <a href="contact.html">contact</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()">☰</button>
+    <div class="welcome">
+        <h1>Welcome to our website of Stage Fright</h1>
+        <p>we have different Clothes avilable click on the picture below to order one of these...</p>
+        <a href="https://www.amazon.com/s?k=t-shirts+unisex&ref=nb_sb_noss" target="_blank"><img src="pictures/hoodie white.jpg" alt="tshirts" class="tshirts"></a>
+        <a href="https://www.amazon.com/s?k=t-shirts+unisex&ref=nb_sb_noss" target="_blank"><img src="pictures/beanie.jpg" alt="Beanie black" class="beanie_black"></a>
+    </div>
+    <div class="footer__item">
+        <h3>Customer Service</h3>
+        <p>Our customer service is available 24 hours a day to assist you with any questions or concerns you may have. You can email us at <a href="mailto:communication@yukonps.com">communication@yukonps.com</a> for any inquiries.</p>
+        <p>Check our schedule and book your tickets for the concert <a class ="dates" href="dates.html">HERE</a>.</p>
+    </div>
+
+    <footer>
+        <div class="footer__container">
+            
+                <h3> </h3>
+                <a href="https://www.instagram.com/yukonhs?igsh=Mjdja3FjODJobmxu" target="_blank" ><p>Instagram</p></a>
+                <a href="https://www.facebook.com/share/19mYqX9Yr1/" target="_blank"><p>Facebook</p></a>
+            
+                <h3> </h3>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+            
+                <h3> </h3>
+                <p>About Us</p>
+                <a href="contact.html"><p>Contact Form</p></a>
+          </div>
+    </footer>
+    <script>
+            
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    }
+        </script>
+    </body>
+</html>

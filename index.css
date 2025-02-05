@@ -1,0 +1,313 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image: url('pictures/stage\ fright.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  display: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+
+@media screen and (max-width: 800px) {
+  .openbtn {
+    display: block;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  width: 100vw;
+  padding: 0 1em;
+  z-index: -1;
+}
+
+
+@media screen and (max-width: 700px) {
+  .links {
+    flex-direction: column;
+    gap: 1em;
+    font-size: medium;
+    top: 10%;
+  }
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+a{
+  text-decoration: none;
+  color: black;
+}
+.aboutus , .contact, .tour{
+  font-size: 1.5em;
+  padding: 1em;
+  width: 45vmin;
+  height: 38vmin;
+  z-index: 1; 
+  position: relative; 
+  border-radius: .5rem;
+  background-color: #ffff;
+  opacity: 0.8;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.aboutus:hover, .contact:hover, .tour:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  background-color: #f0f0f0;
+  opacity: 0.9;
+  
+}
+
+header{
+    background-color: black;
+    font-size:  1.4em;
+    display: flex;
+    justify-content: space-around;
+    height: 2.5em;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+@media screen and (max-width: 800px){
+  header{
+      display: none;
+  }
+}
+
+#home{
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#dates{
+  color: white;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+#about{
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contact{
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 800px){
+  header{
+      flex-direction: column;
+      height: 5em;
+  }
+  
+}
+
+@media screen and (max-width : 600px){
+  header{
+      display: none;
+  }
+}
+
+
+.mobile-container {
+  max-width: 100%;
+  margin: auto;
+  background-color: black;
+  height: fit-content;
+  color: white;
+  border-radius: 10px;
+  display: none; /* Initially hidden */
+}
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: red;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color:black;
+  color: white;
+
+}
+
+.active {
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+
+}
+
+.welcome img{
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: .5rem;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
+  position: relative;
+  left: 40%;
+  z-index: -1;
+}
+
+.welcome h1{
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -10%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.welcome p{
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -10%;
+  left: -10%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+}
+
+img {
+  animation: glow 2s infinite alternate;
+}
+
+
+@media screen and (max-width: 600px) {
+  .links {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .aboutus, .contact, .tour {
+    width: 80vw;
+    height: auto;
+    padding: 1em;
+    font-size: 1.2em;
+  }
+}
+
+.footer__container {
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color:white;
+  align-items: center;
+  display: flex; /* Use flexbox */
+  justify-content: space-around; /* Distribute space evenly */
+  position: absolute;
+  bottom: -10vh;
+  background-color: black;
+  z-index: 1;
+}
+
+.footer__container a {
+  text-decoration: none;
+  color: white;
+  margin: 0 1em; /* Add some margin between items */
+}

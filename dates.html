@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dates.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i">
+</head>
+<header>
+    <nav>
+        <a href="index.html" id="home">Home</a>
+    </nav>
+    <nav>
+        <a href="about.html" id="about">About</a>
+    </nav>
+    <nav>
+        <a href="contact.html" id="contact">contact</a>
+    </nav>
+    <nav>
+    </nav>
+    
+</header>
+<body>
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="index.html">Home </a>
+    <a href="about.html">About</a>
+    <a href="contact.html">contact</a>
+  </div>
+  
+  <button class="openbtn" onclick="openNav()">☰</button>  
+
+    <div class="description">
+        <h1>Upcoming Tour Dates</h1>
+        <p>We are excited to announce that we will be visiting and performing concerts at various locations across the United States. Join us for an unforgettable experience at some of the most iconic venues in the country. Check out the Dates and Locations
+          below and make sure to book your tickets early!
+          <button class="learn">Learn More</button>
+        </p>
+        <div class="booking">
+          <button>
+            <h2>Book Now</h2>
+          </button>
+        </div>
+    </div>
+
+  
+    <section class="container">
+        <header>Registration Form <button class="close">X</button></header>
+        <form class="form" action="#">
+            <div class="input-box">
+                <label>Full Name</label>
+                <input required="" placeholder="Enter full name" type="text">
+            </div>
+            <div class="column">
+                <div class="input-box">
+                  <label>Phone Number</label>
+                  <input required="" placeholder="Enter phone number" type="telephone">
+                </div>
+                <div class="input-box">
+                  <label>Birth Date</label>
+                  <input required="" placeholder="Enter birth date" type="date">
+                </div>
+            </div>
+            <div class="gender-box">
+              <label>Gender</label>
+              <div class="gender-option">
+                <div class="gender">
+                  <input checked="" name="gender" id="check-male" type="radio">
+                  <label for="check-male">Male</label>
+                </div>
+                <div class="gender">
+                  <input name="gender" id="check-female" type="radio">
+                  <label for="check-female">Female</label>
+                </div>
+                <div class="gender">
+                  <input name="gender" id="check-other" type="radio">
+                  <label for="check-other">Prefer not to say</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-box address">
+                <div class="column">
+                  <div class="select-box">
+                    <select>
+                      <option hidden="">Country</option>
+                      <option>OKC</option>
+                      <option>Dallas</option>
+                      <option>Huston</option>
+                      <option>Austin</option>
+                      <option>New Work City</option>
+                      <option>Boston</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
+        </section>
+  
+
+        <div class="welcome">
+          <h1>Welcome to our website of Stage Fright</h1>
+          <p>we have different Clothes avilable click on the picture below to order one of these...</p>
+          <a href="https://www.amazon.com/s?k=t-shirts+unisex&ref=nb_sb_noss" target="_blank"><img src="pictures/tshirts.jpg" alt="tshirts" class="tshirts"></a>
+         <a href="https://www.amazon.com/s?k=t-shirts+unisex&ref=nb_sb_noss" target="_blank"><img src="pictures/beanie black.jpg" alt="Beanie black" class="beanie_black"></a>
+        <a href="https://www.amazon.com/s?k=t-shirts+unisex&ref=nb_sb_noss" target="_blank"><img src="pictures/hoodie.jpg" alt="Hoodie" class="hoodie"></a>
+      </div>
+    <div class="date_img">
+      <img src="pictures/tour dates.jpg" alt="dates" class="dt">
+    </div>
+    <footer>
+        <div class="footer__container">
+            
+                <h3> </h3>
+                <a href="https://www.instagram.com/yukonhs?igsh=Mjdja3FjODJobmxu" target="_blank" ><p>Instagram</p></a>
+                <a href="https://www.facebook.com/share/19mYqX9Yr1/" target="_blank"><p>Facebook</p></a>
+            
+                <h3> </h3>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+            
+                <h3> </h3>
+                <p>About Us</p>
+                <a href="contact.html"><p>Contact Form</p></a>
+          </div>
+    </footer>
+    <script>
+
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const imgButton = document.querySelector('.learn'); // Select the button with class 'learn'
+    const imgeShow = document.querySelector('.dt'); // Select the image with class 'dt'
+
+    console.log(imgButton);
+    console.log(imgeShow); 
+
+    if (imgButton && imgeShow) {
+        imgButton.addEventListener('click', function() {
+            imgeShow.style.display = 'inline-block'; // Show the image when the button is clicked
+        });
+    } else {
+        console.error('One or both elements not found');
+    }
+
+    const bookingButton = document.querySelector('.booking button');
+    const bookingForm = document.querySelector('.container');
+
+    bookingButton.addEventListener('click', function() {
+      bookingForm.style.display = 'inline-block';
+      imgeShow.style.display = 'none';
+
+    const closeButton = document.querySelector('.close');
+    closeButton.addEventListener('click', function() {
+        bookingForm.style.display = 'none';
+    });
+});
+    });
+  </script>
+</body>
+</html>
